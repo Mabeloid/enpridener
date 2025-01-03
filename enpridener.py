@@ -14,7 +14,22 @@ flags = {
         "type": "hstripe",
         "colors": ['d52d00', 'ff9a56', 'ffffff', 'd362a4', 'a30262']
     }],
+    "ace": [{
+        "type": "hstripe",
+        "colors": ['000000', 'a4a4a4', 'ffffff', 'ee00ff']
+    }],
+    "aro": [{
+        "type": "hstripe",
+        "colors": ['3da542', 'a7d379', 'ffffff', 'a4a4a4', '000000']
+    }],
 }
+
+for alias, redirect in {
+        "transgender": "trans",
+        "asexual": "ace",
+        "aromantic": "aro",
+}.items():
+    flags[alias] = flags[redirect]
 
 hexstr_to_int = lambda s: int(s, 16) if len(s) == 8 else (int(
     s, 16) << 8) + 0xff if len(s) == 6 else 0
@@ -98,5 +113,7 @@ if __name__ == "__main__":
     p.pride("trans", radius=0.5)
     p.pride("nonbinary", radius=0.5)
     p.pride("lesbian", radius=0.5)
+    p.pride("ace", radius=0.5)
+    p.pride("aro", radius=0.5)
     p.save("icon_out.png")
     p.resize(512).save("icon_out_resized.png")
