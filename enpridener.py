@@ -14,6 +14,10 @@ flags = {
         "type": "hstripe",
         "colors": ['d52d00', 'ff9a56', 'ffffff', 'd362a4', 'a30262']
     }],
+    "bi": [{
+        "type": "hstripe",
+        "colors": ['d70071', 'd70071', 'd362a4', '0035a9', '0035a9']
+    }],
     "ace": [{
         "type": "hstripe",
         "colors": ['000000', 'a4a4a4', 'ffffff', 'ee00ff']
@@ -26,6 +30,7 @@ flags = {
 
 for alias, redirect in {
         "transgender": "trans",
+        "biasexual": "bi",
         "asexual": "ace",
         "aromantic": "aro",
 }.items():
